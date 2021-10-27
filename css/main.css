@@ -83,7 +83,7 @@ a:hover{
     background-color: grey;
 }
 #main {
-    background: grey;
+    background: rgb(97, 97, 97);
     height: 100vh;
     max-width: 100%;
     color: white;
