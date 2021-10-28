@@ -39,13 +39,14 @@ html{
     box-shadow: 0px 1px 18px -4px rgba(0, 0, 0, 0.35);
     -webkit-box-shadow: 0px 1px 18px -4px rgba(0, 0, 0, 0.35);
     -moz-box-shadow: 0px 1px 18px -4px rgba(0, 0, 0, 0.35);
+    background: linear-gradient(90deg, rgba(170, 170, 170, 0.5798806179775281) 0%, rgba(0, 0, 0, 0.3270716292134831) 58%);
+    position: fixed;
     display: flex;
     justify-content: space-evenly;
-    background: linear-gradient(90deg, rgba(170, 170, 170, 0.5798806179775281) 0%, rgba(0, 0, 0, 0.3270716292134831) 58%);
     top: 0;
-    position: fixed;
     width: 100%;
     height: 85px;
+    z-index: 200;
 }
 .left-navbar{
     float: left;
@@ -84,7 +85,7 @@ a:hover{
     background-color: grey;
 }
 #main {
-    background: rgb(97, 97, 97);
+    background: radial-gradient(circle, rgba(0, 0, 0, 1) 66%, rgba(0, 0, 0, 0.8626522107070751) 100%);
     height: 100vh;
     max-width: 100%;
     color: white;
@@ -107,6 +108,7 @@ a:hover{
     font-size: 1.3rem;
 }
 #work-container{
+    background: rgb(97, 97, 97);
     height: 100vh;
     max-width: 100%;
     display: flex;
@@ -114,6 +116,8 @@ a:hover{
     align-items: center;
 }
 .first-project{
+    position: absolute;
+    width: 100%;
     margin: auto;
 }
 #projects{
@@ -123,17 +127,28 @@ a:hover{
     font-size: 4rem;
 }
 #resume-container {
-    background: radial-gradient(circle, rgba(0, 0, 0, 1) 66%, rgba(0, 0, 0, 0.8626522107070751) 100%);
-
-    color: white;
+    color: black;
     height: 100vh;
+    max-width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+}
+#resume{
+    animation: intro1 1s ease;
+    writing-mode: vertical-lr;
+    letter-spacing: 10px;
+    font-size: 4rem;
+}
+.first-resume{
+    position: absolute;
+    width: 100%;
+    margin: 0 auto;
 }
 #about-container {
     background: rgb(207, 189, 200);
     height: 100vh;
+    max-width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -146,8 +161,11 @@ a:hover{
     font-size: 4rem;
 }
 #about-text{
-    font-size: 1.3rem;
+    color: white;
+    position: absolute;
     margin: 0 auto;
+    width: 100%;
+    font-size: 1rem;
 }
 #contact-container {
     background: #F1E4E8;
@@ -166,16 +184,23 @@ a:hover{
     justify-content: center;
 }
 .form-container{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
+}
+#form-text{
+    font-size: 2.5rem;
+    margin: 8% 0 30px 0;
 }
 input{
     text-align: left;
     outline: none;
     padding: 8px;
+    width: 20%;
     margin: 30px 0;
     border-radius: 8px;
     border: 2px solid rgba(128, 128, 128, 0.514);
@@ -183,17 +208,28 @@ input{
 }
 input:focus{
     border: black 2px solid;
-
 }
 #description-input{
-    height: 300px;
-    text-align: start top;
+    margin: 30px 0;
+    border-radius: 8px;
+    border: 2px solid rgba(128, 128, 128, 0.514);
+    transition: 0.4s;
+    border-radius: 8px;
+    padding: 10px;
+    width: 560px;
+    height: 200px;
+    text-align: start;
+    outline: none;
+}
+#description-input:focus {
+    border: black 2px solid;
 }
 #submit-btn{
     background-color: white;
     color: black;
     border: 2px solid rgba(128, 128, 128, 0.514);
     border-radius: 8px;
+    margin: 30px 0;
     padding: 10px 24px;
     font-size: 1rem;
     cursor: pointer;
