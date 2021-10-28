@@ -11,55 +11,68 @@
     
     <header>
         <nav class="navbar">
-             <div class="left-navbar"> 
-                <a href="#main">Home</a>
-                <a href="#work-container">Projects</a>
-                <a href="#resume-container">Resume</a>
-                <a href="#about-container">About</a>
-            </div>
-            <div class="right-navbar">
-                <a id="contact-btn" href="#contact-container">Contact Me</a>
+            <div class="navbar-wrapper">
+                <div class="left-navbar"> 
+                    <a href="#main">Home</a>
+                    <a href="#work-container">Projects</a>
+                    <a href="#resume-container">Resume</a>
+                    <a href="#about-container">About</a>
+                </div>
+                <div class="right-navbar">
+                    <a id="contact-btn" href="#contact-container">Contact Me</a>
+                </div>
             </div>
         </nav>
         <div id="main"> 
-            <h1 id="welcome">WELCOME</h1>
-            <h1 id="main-text">Hi! my name is Fares and I'm a front end developer from Algeria.
-            </h1>
-            </div> 
+            <div class="main-wrapper">
+                <h1 id="welcome">WELCOME</h1>
+                <h1 id="main-text">Hi! my name is Fares and I'm a front end developer from Algeria.
+                </h1>
+                </div> 
+            <div class="drop-down"></div>
+            </div>
     </header>
 
 
     <section id="work-container">
-        <h1 id="projects">PROJECTS</h1>
-        <div class="first-project"> 
-            Coming soon
+        <div class="work-wrapper">
+            <h1 id="projects">PROJECTS</h1>
+            <div class="first-project"> 
+                (Coming soon)
+            </div>
         </div>
+        
     </section>
 
 
     <section id="resume-container">
+        <div class="resumer-wrapper">
         <h1 id="resume">RESUME</h1>
-        <div class="first-resume"> 
-            Coming soon
-        </div>
+            <div class="first-resume">(Coming soon)</div>
+        </div>    
     </section>
 
 
     <section id="about-container">
-        <h1 id="about">ABOUT ME</h1>
-        <h1 id="about-text">Coming soon</h1>
+        <div class="about-wrapper">
+        <h1 id="about">ABOUT</h1>
+        <div class="about-text">(Coming soon)</div>
+        </div>
+        
     </section>
 
     <section id="contact-container">
-        <h1 id="contact">CONTACT</h1>
-        <form class="form-container" action="">
-            <h1 id="form-text">Interested in working with me?</h1>
-            <input id="name-input" type="name" name="" placeholder="NAME">
-            <input id="email-input" type="email" placeholder="EMAIL">
-            <input id="object-input" type="text" placeholder="SUBJECT">
-            <textarea id="description-input" type="description" placeholder="DESCRIPTION"></textarea>
-            <button id="submit-btn">Submit</button>
-        </form>
+        <div class="contact-wrapper">
+            <h1 id="contact">CONTACT</h1>
+            <form class="form-container" action="">
+                <h1 id="form-text">Interested in working with me?</h1>
+                <input id="name-input" type="name" name="" placeholder="NAME">
+                <input id="email-input" type="email" placeholder="EMAIL">
+                <input id="object-input" type="text" placeholder="SUBJECT">
+                <textarea id="description-input" type="description" placeholder="DESCRIPTION"></textarea>
+                <button id="submit-btn">Submit</button>
+            </form>
+        </div>
     </section>
     
 
