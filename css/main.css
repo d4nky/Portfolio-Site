@@ -414,6 +414,7 @@ input:focus {
         margin-right: 9%;
     }
     .link-container{
+        padding: 10% 0 10% 0;
         font-size: 2rem;
         background: green;
         position: fixed;
