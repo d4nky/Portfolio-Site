@@ -1,15 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="/css/main.css">
-</head>
-<body>
-    
-    <header>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Portfolio</title>
+        <link rel="stylesheet" href="/css/main.css">
+    </head>
+
+                
+
+    <body>
+        <div class="mobile-navbar">
+            <div class="button-container">
+                <img id="btn" src="/materials/images/menu_white_52.png" alt="button">
+            </div>
+            
+            <div class="dropdown-container">
+
+                <div class="dropdown-wrapper">
+                    <a href="#main">Home</a>
+                    <a href="#work-container">Projects</a>
+                    <a href="#resume-container">Resume</a>
+                    <a href="#about-container">About</a>
+                    <a href="#contact-container">Contact</a>
+                </div>
+            </div>
+                
+        </div>
+
         <nav class="navbar">
             <div class="navbar-wrapper">
                 <div class="left-navbar"> 
@@ -22,18 +41,16 @@
                     <a id="contact-btn" href="#contact-container">Contact Me</a>
                 </div>
             </div>
-        </nav>
-        <div id="main"> 
-            <div class="main-wrapper">
-                <h1 id="welcome">WELCOME</h1>
-                <h1 id="main-text">Hi! my name is Fares and I'm a front end developer from Algeria.
-                </h1>
-                </div> 
-            <div class="drop-down"></div>
-            </div>
-    </header>
+        </nav> 
 
-
+    <div id="content">
+    <div id="main"> 
+        <div class="main-wrapper">
+            <h1 id="welcome">WELCOME</h1>
+            <h1 id="main-text">Hi! my name is Fares and I'm a front end developer from Algeria.
+            </h1>
+            </div> 
+        </div>
     <section id="work-container">
         <div class="work-wrapper">
             <h1 id="projects">PROJECTS</h1>
@@ -73,8 +90,8 @@
                 <button id="submit-btn">Submit</button>
             </form>
         </div>
-    </section>
-    
-
+    </section>  
+</div>
+        <script src="/js/main.js"></script>
 </body>
 </html>
