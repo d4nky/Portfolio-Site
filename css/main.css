@@ -58,10 +58,9 @@ html, body{
     #btn{
         display: none;
     }
-@media(min-width:1174px){
 
 /* Drop down menu for mobile */
-    .mobile-navbar {
+    .dropdown-container {
         display: none;
     }
 
@@ -350,8 +349,8 @@ input:focus {
     text-align: left;
     padding-left: 20px;
     color: grey;
-    }
 }
+
 
 @media (max-width: 1174px){
     .dropdown-container{
@@ -412,7 +411,6 @@ input:focus {
     }
     .dropdown-wrapper a{
         font-size: 2.5rem;
-        color: white;
     }
     .dropdown-wrapper{
         font-size: 2rem;
