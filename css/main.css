@@ -1,12 +1,21 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 /* Going in with no sass just pure css lmao, enjoy the mess */
 
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Libre+Franklin:wght@400;600&family=Poppins&display=swap');
 
 * {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    -webkit-text-decoration: 0;
     text-decoration: 0;
     font-family: 'Inter',
         sans-serif;
@@ -27,9 +36,35 @@ body {
 
 
 /* Animations */
+@-webkit-keyframes intro1 {
+    0% {
+        -webkit-transform: translateY(-500px);
+        transform: translateY(-500px);
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
 @keyframes intro1 {
     0% {
+        -webkit-transform: translateY(-500px);
         transform: translateY(-500px);
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+@-webkit-keyframes intro2 {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
     }
 
     100% {
@@ -51,6 +86,20 @@ body {
     }
 }
 
+@-webkit-keyframes main {
+    0% {
+        background: black;
+    }
+
+    50% {
+        background-color: black;
+    }
+
+    100% {
+        background: radial-gradient(circle, rgba(0, 0, 0, 1) 66%, rgba(0, 0, 0, 0.8626522107070751) 100%);
+    }
+}
+
 @keyframes main {
     0% {
         background: black;
@@ -61,6 +110,7 @@ body {
     }
 
     100% {
+        background: -o-radial-gradient(circle, rgba(0, 0, 0, 1) 66%, rgba(0, 0, 0, 0.8626522107070751) 100%);
         background: radial-gradient(circle, rgba(0, 0, 0, 1) 66%, rgba(0, 0, 0, 0.8626522107070751) 100%);
     }
 }
@@ -80,6 +130,8 @@ body {
     box-shadow: 0px 1px 18px -4px rgba(0, 0, 0, 0.35);
     -webkit-box-shadow: 0px 1px 18px -4px rgba(0, 0, 0, 0.35);
     -moz-box-shadow: 0px 1px 18px -4px rgba(0, 0, 0, 0.35);
+    background: -webkit-gradient(linear, left top, right top, from(rgba(170, 170, 170, 0.5798806179775281)), color-stop(58%, rgba(0, 0, 0, 0.3270716292134831)));
+    background: -o-linear-gradient(left, rgba(170, 170, 170, 0.5798806179775281) 0%, rgba(0, 0, 0, 0.3270716292134831) 58%);
     background: linear-gradient(90deg, rgba(170, 170, 170, 0.5798806179775281) 0%, rgba(0, 0, 0, 0.3270716292134831) 58%);
     position: fixed;
     top: 0;
@@ -89,8 +141,13 @@ body {
 }
 
 .navbar-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
     justify-content: space-evenly;
+    -ms-flex-line-pack: center;
     align-content: center;
     margin: 0 auto;
     height: 100%;
@@ -100,16 +157,27 @@ body {
 .left-navbar {
     float: left;
     width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
 .right-navbar {
     float: right;
     width: 20%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -117,6 +185,8 @@ a {
     color: white;
     font-size: 1.2rem;
     font-weight: 600;
+    -webkit-transition: all ease 100ms;
+    -o-transition: all ease 100ms;
     transition: all ease 100ms;
 }
 
@@ -130,6 +200,8 @@ a:hover {
     font-weight: 200;
     border-radius: 8px;
     background-color: white;
+    -webkit-transition: all ease 100ms;
+    -o-transition: all ease 100ms;
     transition: all ease 100ms;
 }
 
@@ -141,7 +213,9 @@ a:hover {
 
 /* Homepage */
 #main {
+    background: -o-radial-gradient(circle, rgba(0, 0, 0, 1) 66%, rgba(0, 0, 0, 0.8626522107070751) 100%);
     background: radial-gradient(circle, rgba(0, 0, 0, 1) 66%, rgba(0, 0, 0, 0.8626522107070751) 100%);
+    -webkit-animation: main 2.3s;
     animation: main 2.3s;
     height: 100vh;
     width: 100%;
@@ -149,8 +223,14 @@ a:hover {
 }
 
 .main-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     height: 100%;
     width: 100%;
@@ -158,13 +238,17 @@ a:hover {
 
 #welcome {
     position: absolute;
+    -webkit-animation: intro1 1s ease;
     animation: intro1 1s ease;
+    -webkit-writing-mode: vertical-lr;
+    -ms-writing-mode: tb-lr;
     writing-mode: vertical-lr;
     letter-spacing: 10px;
     font-size: 4rem;
 }
 
 #main-text {
+    -webkit-animation: intro2 2.3s ease-out;
     animation: intro2 2.3s ease-out;
     font-size: 1.3rem;
     margin: 0 auto;
@@ -180,8 +264,14 @@ a:hover {
 }
 
 .work-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     height: 100%;
     width: 100%;
@@ -194,7 +284,10 @@ a:hover {
 
 #projects {
     position: absolute;
+    -webkit-animation: intro1 1s ease;
     animation: intro1 1s ease;
+    -webkit-writing-mode: vertical-lr;
+    -ms-writing-mode: tb-lr;
     writing-mode: vertical-lr;
     letter-spacing: 10px;
     font-size: 4rem;
@@ -209,8 +302,14 @@ a:hover {
 }
 
 .resume-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     height: 100%;
     width: 100%;
@@ -223,7 +322,10 @@ a:hover {
 
 #resume {
     position: absolute;
+    -webkit-animation: intro1 1s ease;
     animation: intro1 1s ease;
+    -webkit-writing-mode: vertical-lr;
+    -ms-writing-mode: tb-lr;
     writing-mode: vertical-lr;
     letter-spacing: 10px;
     font-size: 4rem;
@@ -238,16 +340,28 @@ a:hover {
 }
 
 .about-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     height: 100%;
     width: 100%;
 }
 
 .about-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     height: 100%;
     width: 100%;
@@ -256,7 +370,10 @@ a:hover {
 #about {
     position: absolute;
     color: white;
+    -webkit-animation: intro1 1s ease;
     animation: intro1 1s ease;
+    -webkit-writing-mode: vertical-lr;
+    -ms-writing-mode: tb-lr;
     writing-mode: vertical-lr;
     letter-spacing: 10px;
     font-size: 4rem;
@@ -276,19 +393,30 @@ a:hover {
     height: 100vh;
     max-width: 100%;
     color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
 .contact-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     height: 100%;
     width: 100%;
 }
 
 #contact {
+    -webkit-animation: intro1 1s ease;
     animation: intro1 1s ease;
+    -webkit-writing-mode: vertical-lr;
+    -ms-writing-mode: tb-lr;
     writing-mode: vertical-lr;
     letter-spacing: 10px;
     font-size: 4rem;
@@ -298,9 +426,18 @@ a:hover {
     position: absolute;
     height: 100vh;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -317,6 +454,8 @@ input {
     margin: 30px 0;
     border-radius: 8px;
     border: 2px solid rgba(128, 128, 128, 0.514);
+    -webkit-transition: 0.4s;
+    -o-transition: 0.4s;
     transition: 0.4s;
 }
 
@@ -327,6 +466,8 @@ input:focus {
 #description-input {
     border: 2px solid rgba(128, 128, 128, 0.514);
     border-radius: 8px;
+    -webkit-transition: 0.4s;
+    -o-transition: 0.4s;
     transition: 0.4s;
     border-radius: 8px;
     margin: 30px 0;
@@ -350,6 +491,8 @@ input:focus {
     padding: 10px 24px;
     font-size: 1rem;
     cursor: pointer;
+    -webkit-transition: all ease 100ms;
+    -o-transition: all ease 100ms;
     transition: all ease 100ms;
 }
 
@@ -357,6 +500,18 @@ input:focus {
     background-color: grey;
     color: white;
     border: 2px solid white;
+}
+
+:-moz-placeholder-shown {
+    text-align: left;
+    padding-left: 20px;
+    color: grey;
+}
+
+:-ms-input-placeholder {
+    text-align: left;
+    padding-left: 20px;
+    color: grey;
 }
 
 :placeholder-shown {
@@ -383,12 +538,16 @@ input:focus {
         margin: 30px 0;
         border-radius: 8px;
         border: 2px solid rgba(128, 128, 128, 0.514);
+        -webkit-transition: 0.4s;
+        -o-transition: 0.4s;
         transition: 0.4s;
     }
 
     #description-input {
         border: 2px solid rgba(128, 128, 128, 0.514);
         border-radius: 8px;
+        -webkit-transition: 0.4s;
+        -o-transition: 0.4s;
         transition: 0.4s;
         border-radius: 8px;
         margin: 30px 0;
@@ -415,7 +574,11 @@ input:focus {
     }
 
     .button-container {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
         justify-content: flex-end;
     }
 
@@ -429,7 +592,11 @@ input:focus {
     }
 
     .dropdown-container {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
         justify-content: flex-end;
     }
 
@@ -445,10 +612,20 @@ input:focus {
         width: 85%;
         padding: 10% 0 10% 0;
         margin: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
+        -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
         justify-content: space-evenly;
+        -ms-flex-line-pack: center;
         align-content: center;
+        -webkit-transition: 0.5s;
+        -o-transition: 0.5s;
         transition: 0.5s;
     }
 
@@ -489,6 +666,8 @@ input:focus {
         margin: 30px 0;
         border-radius: 8px;
         border: 2px solid rgba(128, 128, 128, 0.514);
+        -webkit-transition: 0.4s;
+        -o-transition: 0.4s;
         transition: 0.4s;
     }
 
@@ -499,6 +678,8 @@ input:focus {
     #description-input {
         border: 2px solid rgba(128, 128, 128, 0.514);
         border-radius: 8px;
+        -webkit-transition: 0.4s;
+        -o-transition: 0.4s;
         transition: 0.4s;
         border-radius: 8px;
         margin: 30px 0 15px 0;
@@ -522,6 +703,8 @@ input:focus {
         padding: 10px 24px;
         font-size: 1rem;
         cursor: pointer;
+        -webkit-transition: all ease 100ms;
+        -o-transition: all ease 100ms;
         transition: all ease 100ms;
     }
 
@@ -529,6 +712,18 @@ input:focus {
         background-color: grey;
         color: white;
         border: 2px solid white;
+    }
+
+    :-moz-placeholder-shown {
+        text-align: left;
+        padding-left: 20px;
+        color: grey;
+    }
+
+    :-ms-input-placeholder {
+        text-align: left;
+        padding-left: 20px;
+        color: grey;
     }
 
     :placeholder-shown {
