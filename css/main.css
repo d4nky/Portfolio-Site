@@ -58,14 +58,11 @@ html, body{
     #btn{
         display: none;
     }
+@media(min-width:1174px){
 
 /* Drop down menu for mobile */
-    .drop-down {
+    .mobile-navbar {
         display: none;
-        height: 100vh;
-        width: 80%;
-        float: right;
-        background-color: green;
     }
 
 
@@ -353,8 +350,8 @@ input:focus {
     text-align: left;
     padding-left: 20px;
     color: grey;
+    }
 }
-
 
 @media (max-width: 1174px){
     .dropdown-container{
@@ -415,6 +412,7 @@ input:focus {
     }
     .dropdown-wrapper a{
         font-size: 2.5rem;
+        color: white;
     }
     .dropdown-wrapper{
         font-size: 2rem;
@@ -423,7 +421,7 @@ input:focus {
         height: 100vh;
         width: 85%;
         padding: 10% 0 10% 0;
-        margin: 0 -500px;
+        margin: 0 auto;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
