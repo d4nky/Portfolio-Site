@@ -28,7 +28,7 @@
 
 html,
 body {
-    font-size: 14px;
+    font-size: 16px;
     overflow-x: hidden;
     width: 100%;
     scroll-behavior: smooth;
@@ -102,16 +102,15 @@ body {
 
 @keyframes main {
     0% {
-        background: black;
+        background: white;
     }
 
     50% {
-        background-color: black;
+        background: #FFEDE1;
     }
 
     100% {
-        background: -o-radial-gradient(circle, rgba(0, 0, 0, 1) 66%, rgba(0, 0, 0, 0.8626522107070751) 100%);
-        background: radial-gradient(circle, rgba(0, 0, 0, 1) 66%, rgba(0, 0, 0, 0.8626522107070751) 100%);
+        background: #FFEDE1;
     }
 }
 
@@ -130,9 +129,7 @@ body {
     box-shadow: 0px 1px 18px -4px rgba(0, 0, 0, 0.35);
     -webkit-box-shadow: 0px 1px 18px -4px rgba(0, 0, 0, 0.35);
     -moz-box-shadow: 0px 1px 18px -4px rgba(0, 0, 0, 0.35);
-    background: -webkit-gradient(linear, left top, right top, from(rgba(170, 170, 170, 0.5798806179775281)), color-stop(58%, rgba(0, 0, 0, 0.3270716292134831)));
-    background: -o-linear-gradient(left, rgba(170, 170, 170, 0.5798806179775281) 0%, rgba(0, 0, 0, 0.3270716292134831) 58%);
-    background: linear-gradient(90deg, rgba(170, 170, 170, 0.5798806179775281) 0%, rgba(0, 0, 0, 0.3270716292134831) 58%);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%);
     position: fixed;
     top: 0;
     width: 100%;
@@ -213,7 +210,7 @@ a:hover {
 
 /* Homepage */
 #main {
-    background: #FFEDE1;
+    background: #252422;
     -webkit-animation: main 2.3s;
     animation: main 2.3s;
     height: 100vh;
@@ -257,7 +254,7 @@ a:hover {
 
 /* Projects section */
 #work-container {
-    background: #F9FBF2;
+    background: #284b63;
     height: 100vh;
     width: 100%;
 }
@@ -282,6 +279,7 @@ a:hover {
 }
 
 #projects {
+    color: white;
     position: absolute;
     -webkit-animation: intro1 1s ease;
     animation: intro1 1s ease;
@@ -295,8 +293,8 @@ a:hover {
 
 /* Resume section */
 #resume-container {
-    background: #E8FAF9;
-    color: black;
+    background: #3c6e71;
+    color: white;
     height: 100vh;
     width: 100%;
 }
@@ -321,6 +319,7 @@ a:hover {
 }
 
 #resume {
+    color: white;
     position: absolute;
     -webkit-animation: intro1 1s ease;
     animation: intro1 1s ease;
@@ -334,7 +333,7 @@ a:hover {
 
 /* About section */
 #about-container {
-    background: #D7F9FF;
+    background: #de2ee6;
     height: 100vh;
     width: 100%;
 }
