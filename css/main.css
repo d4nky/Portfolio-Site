@@ -33,7 +33,7 @@ body {
     overflow-x: hidden;
     width: 100%;
     scroll-behavior: smooth;
-    background: linear-gradient(180deg, rgba(143, 185, 168, 0.5) 0%, rgba(34, 116, 165, 1) 25%, rgba(252, 208, 186, 0.5) 50%, rgba(241, 130, 141, 0.5) 75%, rgba(118, 93, 105, 0.5) 100%);
+    background: linear-gradient(180deg, rgba(143, 185, 168, 0.5) 0%, rgba(252, 224, 189, 0.7090941011235955) 25%, rgba(252, 208, 186, 0.5) 50%, rgba(241, 130, 141, 0.5) 75%, rgba(118, 93, 105, 0.5) 100%);
 }
 
 /* Animations */
