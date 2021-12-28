@@ -11,13 +11,14 @@
                 
 
     <body>
+        <div class="english">
+
         <div class="mobile-navbar">
             <div class="button-container">
                 <img id="btn" src="/materials/images/menu_white_52.png" alt="button">
             </div>
             
             <div class="dropdown-container">
-
                 <div class="dropdown-wrapper">
                     <a href="#main">Home</a>
                     <a href="#work-container">Projects</a>
@@ -39,6 +40,12 @@
                 </div>
                 <div class="right-navbar">
                     <a id="contact-btn" href="#contact-container">Contact Me</a>
+                    <div class="language-container">
+                        <select name="language" id="language-selector">
+                            <option id="english-selector" value="english">EN</option>
+                            <option id="french-selector" value="french">FR</option>
+                        </select>
+                    </div>
                 </div>
             </div>
         </nav> 
@@ -81,17 +88,109 @@
     <section id="contact-container">
         <div class="contact-wrapper">
             <h1 id="contact">CONTACT</h1>
-            <form class="form-container" action="">
+            <form id="form" class="form-container" action="https://formsubmit.co/fb2b5cdfbbd27a69751864e3e9f8479c" method="POST">
                 <h1 id="form-text">Interested in working with me?</h1>
-                <input id="name-input" type="name" name="" placeholder="NAME">
-                <input id="email-input" type="email" placeholder="EMAIL">
-                <input id="object-input" type="text" placeholder="SUBJECT">
-                <textarea id="description-input" type="text" placeholder="DESCRIPTION"></textarea>
-                <button id="submit-btn">Submit</button>
+                <input type="hidden" name="_next" value="https://kherbanefares.com/thankyou.html">
+                <input id="name-input" type="name" name="name" placeholder="NAME" required>
+                <input id="email-input" type="email" placeholder="EMAIL" name="email" required>
+                <input id="object-input" type="text" placeholder="SUBJECT" name="subject" required>
+                <textarea id="description-input" name="description" type="text" placeholder="DESCRIPTION" required></textarea>
+                <button type="submit" id="submit-btn">Submit</button>
             </form>
         </div>
     </section>  
 </div>
+</div>
+
+    <!-- <div class="french">
+        <div class="mobile-navbar">
+            <div class="button-container">
+                <img id="btn" src="/materials/images/menu_white_52.png" alt="button">
+            </div>
+            
+            <div class="dropdown-container">
+                <div class="dropdown-wrapper">
+                    <a href="#main">Accueil</a>
+                    <a href="#work-container">Projets</a>
+                    <a href="#resume-container">Resume</a>
+                    <a href="#about-container">à propos</a>
+                    <a href="#contact-container">Contact</a>
+                </div>
+            </div>
+                
+        </div>
+
+        <nav class="navbar">
+            <div class="navbar-wrapper">
+                <div class="left-navbar"> 
+                    <a href="#main">Accueil</a>
+                    <a href="#work-container">Projets</a>
+                    <a href="#resume-container">Resume</a>
+                    <a href="#about-container">à propos</a>
+                </div>
+                <div class="right-navbar">
+                    <a id="contact-btn" href="#contact-container">Contactez moi</a>
+                    <div class="language-container">
+                        <select name="language" id="language-selector">
+                            <option id="english-selector" value="english">EN</option>
+                            <option id="french-selector" value="french">FR</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </nav> 
+
+    <div id="content">
+    <div id="main"> 
+        <div class="main-wrapper">
+            <h1 id="welcome">BIENVENU</h1>
+            <h1 id="main-text">Hi! my name is Fares and I'm a front end developer from Algeria.
+            </h1>
+            </div> 
+        </div>
+    <section id="work-container">
+        <div class="work-wrapper">
+            <h1 id="projects">PROJETS</h1>
+            <div class="first-project"> 
+                (Coming soon)
+            </div>
+        </div>
+        
+    </section>
+
+
+    <section id="resume-container">
+        <div class="resume-wrapper">
+        <h1 id="resume">RESUME</h1>
+            <div class="first-resume">(Coming soon)</div>
+        </div>    
+    </section>
+
+
+    <section id="about-container">
+        <div class="about-wrapper">
+        <h1 id="about">à PROPOS</h1>
+        <div class="about-text">(Coming soon)</div>
+        </div>
+        
+    </section>
+
+    <section id="contact-container">
+        <div class="contact-wrapper">
+            <h1 id="contact">CONTACT</h1>
+            <form id="form" class="form-container" action="https://formsubmit.co/fb2b5cdfbbd27a69751864e3e9f8479c" method="POST">
+                <h1 id="form-text">Interested in working with me?</h1>
+                <input type="hidden" name="_next" value="https://kherbanefares.com/thankyou.html">
+                <input id="name-input" type="name" name="name" placeholder="NAME" required>
+                <input id="email-input" type="email" placeholder="EMAIL" name="email" required>
+                <input id="object-input" type="text" placeholder="SUBJECT" name="subject" required>
+                <textarea id="description-input" name="description" type="text" placeholder="DESCRIPTION" required></textarea>
+                <button type="submit" id="submit-btn">Submit</button>
+            </form>
+        </div>
+    </section>  
+</div>
+</div> -->
         <script src="/js/main.js"></script>
 </body>
 </html>
