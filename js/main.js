@@ -2,6 +2,16 @@ const button = document.querySelector('.button-container');
 const menu = document.querySelector('.dropdown-wrapper');
 const content = document.getElementById('content');
 
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
 let menuToggle = false;
 
 menu.style.right = '-600px';
